@@ -79,14 +79,14 @@ function countArtistSongs(singer) {
 // Function 8: Play Game 
 function playGame() {
   let score = 0;
-  const songIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; // Assuming there are at least 10 songs
+  const songIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; 
   for (let i = 0; i < songIndices.length; i++) {
     let songIndex = songIndices[i];
     let songTitle = songs[songIndex];
     let correctArtist = artists[songIndex];
     let userAnswer = prompt(`What is the artist of the song "${songTitle}"?`);
     if ((userAnswer == correctArtist)) {
-      score += 10; // 10 points for each correct answer
+      score += 10; 
       console.log(`Correct! You earn ${score} points.`);
     } else {
       console.log(`Incorrect. The correct answer is ${correctArtist}.`);
@@ -102,7 +102,7 @@ function playGame() {
 
 
 // Main Function 
-function userInterface() { // Parameters: None
+function userInterface() { 
   while (true) {
     let choice = prompt(
       "Enter 1 to add a song.\n" +
